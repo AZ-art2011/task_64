@@ -3,12 +3,15 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+Console.Clear();
+
+Console.WriteLine($"Ctrl + C - если программа зациклится.");
 Console.WriteLine("Укажите верхнюю границу > 1:");
 int num = Convert.ToInt32(Console.ReadLine());
 
 void Count (int num)
 {
-    if (num < 0) Console.Write($"{num} не натуральное число");
+    if (num < 0) Console.Write($"{num} Это не натуральное число");
     if (num == 0) return;
     Console.Write($"{num} ");
     Count (num - 1);
